@@ -14,8 +14,8 @@
 }
 .navibo-close {
   position: absolute;
-  top: 3px;
-  right: 5px;
+  top: 3%;
+  right: 7%;
 }
 .navibo-balloon {
   background-color: #fff;
@@ -35,7 +35,4 @@
   position: absolute;
   bottom: -12px;
   left: 70%;
-}
-.nabivo-text {
-  color: red;
 }

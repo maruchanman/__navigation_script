@@ -19,7 +19,18 @@ function load_data(url) {
 
 function load_binds() {
   $(".navibo-ontoggle").on("click", function() {
-    $(".navibo-toggle").toggle()
+    const duration = 100
+    if ($(".navibo-open").is(":visible")) {
+      $(".navibo-open").toggle(duration, function() {
+        $(".navibo-balloon").toggle(duration, function() {
+          $(".navibo-contents").text("ok")
+        })
+      })
+    } else {
+      $(".navibo-balloon").toggle(duration, function() {
+        $(".navibo-open").toggle(duration)
+      })
+    }
   })
 }
 
