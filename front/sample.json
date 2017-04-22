@@ -1,0 +1,31 @@
+{
+    "company_name":"sample company",
+    "create date":"2017-04-01",
+    "update date":"2017-04-22",
+    "questions":[
+                {"question_id":1,
+                 "question_type":"taste",
+                 "answer_typw":"choice",
+                 "message":"あなたが好きな色は？",
+                 "answers":[
+                    {"answer_id":1,
+                     "answer_text":"暖色"
+                    },
+                    {"answer_id":2,
+                     "answer_text":"寒色"
+                    }]
+                },
+                {"question_id":2,
+                 "question_type":"type",
+                 "answer_typw":"choice",
+                 "message":"あなたのタイプは？",
+                 "answers":[
+                    {"answer_id":1,
+                     "answer_text":"ストイック"
+                    },
+                    {"answer_id":2,
+                     "answer_text":"のんびり"
+                    }]
+                }
+                ]
+} 
