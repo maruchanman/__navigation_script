@@ -9,7 +9,7 @@
                  "message":"あなたが好きな色は？",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"暖色",
+                     "answer_text":"暖色"
                     },
                     {"answer_id":2,
                      "answer_text":"寒色"
@@ -21,7 +21,7 @@
                  "message":"あなたのタイプは？",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"ストイック",
+                     "answer_text":"ストイック"
                     },
                     {"answer_id":2,
                      "answer_text":"のんびり"
