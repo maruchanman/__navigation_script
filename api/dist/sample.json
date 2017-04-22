@@ -6,25 +6,25 @@
                 {"question_id":1,
                  "question_type":"taste",
                  "answer_typw":"choice",
-                 "message":"$B$"$J$?$,9%$-$J?'$O!)(B",
+                 "message":"あなたが好きな色は？",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"$BCH?'(B",
+                     "answer_text":"暖色",
                     },
                     {"answer_id":2,
-                     "answer_text":"$B4(?'(B"
+                     "answer_text":"寒色"
                     }]
                 },
                 {"question_id":2,
                  "question_type":"type",
                  "answer_typw":"choice",
-                 "message":"$B$"$J$?$N%?%$%W$O!)(B",
+                 "message":"あなたのタイプは？",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"$B%9%H%$%C%/(B",
+                     "answer_text":"ストイック",
                     },
                     {"answer_id":2,
-                     "answer_text":"$B$N$s$S$j(B"
+                     "answer_text":"のんびり"
                     }]
                 }
                 ]
