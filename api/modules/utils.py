@@ -1,6 +1,19 @@
 # coding-utf-8
+
 import json
+
 
 def load_json(path):
     with open(path, "r") as f:
         return json.load(f)
+
+def sorted_by_dictkey(target, sort_key):
+    '''
+    sort list by dictionary key
+    -- example, key=id --
+    [{id:2, content:"bbb"}, {id:1, content:"aaa"}]
+    -> [{id:1, content:"aaa"}, {id:2, content:"bbb"}]
+    '''
+
+    sorted_list = sorted(target, key=lambda x:x[sort_key])
+    return sorted_list
