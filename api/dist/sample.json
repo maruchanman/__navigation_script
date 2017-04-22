@@ -1,12 +1,13 @@
 {
     "company_name":"sample company",
-    "create date":"2017-04-01",
-    "update date":"2017-04-22",
+    "create_date":"2017-04-01",
+    "update_date":"2017-04-22",
+    "question_threshold":2,
     "questions":[
                 {"question_id":1,
                  "question_type":"taste",
                  "answer_typw":"choice",
-                 "message":"あなたが好きな色は？",
+                 "question":"あなたが好きな色は？",
                  "answers":[
                     {"answer_id":1,
                      "answer_text":"暖色"
@@ -18,7 +19,7 @@
                 {"question_id":2,
                  "question_type":"type",
                  "answer_typw":"choice",
-                 "message":"あなたのタイプは？",
+                 "question":"あなたのタイプは？",
                  "answers":[
                     {"answer_id":1,
                      "answer_text":"ストイック"
@@ -26,6 +27,38 @@
                     {"answer_id":2,
                      "answer_text":"のんびり"
                     }]
+                },
+                {"question_id":3,
+                 "question_type":"type",
+                 "answer_typw":"choice",
+                 "question":"あなたのモチベーションは？",
+                 "answers":[
+                    {"answer_id":1,
+                     "answer_text":"彼女"
+                    },
+                    {"answer_id":2,
+                     "answer_text":"お金"
+                    }]
                 }
-                ]
-} 
+                ],
+    "items":[
+            {"item_id":1,
+             "item_image":"image_1",
+             "item_url":"url_kirakira",
+             "item_name":"キラキラセット",
+             "item_discription":"とにかくキラキラしています。"
+            },
+            {"item_id":2,
+             "item_image":"image_2",
+             "item_url":"url_wakuwaku",
+             "item_name":"ワクワクセット",
+             "item_discription":"とにかくワクワクしています。"
+            },
+            {"item_id":3,
+             "item_image":"image_3",
+             "item_url":"url_oraora",
+             "item_name":"オラオラセット",
+             "item_discription":"とにかくオラオラしています。"
+            }
+            ]
+}
