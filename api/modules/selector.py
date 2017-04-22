@@ -146,11 +146,11 @@ class Selector(object):
             - available question numbers
         '''
         used_nums = [x[0] for x in self.records]
-        if len(used_nums) >= self.threshold:
+        question_nums = [x for x in range(1, len(self.questions)+1)]
+        available_nums = list(filter(lambda x: x not in used_nums, question_nums))
+        if len(used_nums) >= self.threshold or len(available_nums) == 0:
             return -1
         else:
-            question_nums = [x for x in range(1, len(self.questions)+1)]
-            available_nums = list(filter(lambda x: x not in used_nums, question_nums))
             return available_nums
 
     def get_message(self):
