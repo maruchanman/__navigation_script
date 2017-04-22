@@ -1,11 +1,41 @@
 #navibo-footer {
+  font-family: Impact;
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 0;
   margin: 0;
+  padding: 10px;
+  display: block;
+  width: 200px;
+  text-align: center;
 }
-
-#navibo-footer h1 {
+.navibo-ontoggle {
+  cursor: pointer;
+}
+.navibo-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
+.navibo-balloon {
+  background-color: #fff;
+  padding: 20px 20px;
+  position: relative;
+  border: solid 3px black;
+  border-radius: 10%;
+  min-height: 80px;
+  text-align: center;
+}
+.navibo-balloon:after {
+  border-top: 12px solid black;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  content: '';
+  margin-left: -10px;
+  position: absolute;
+  bottom: -12px;
+  left: 70%;
+}
+.nabivo-text {
   color: red;
 }
