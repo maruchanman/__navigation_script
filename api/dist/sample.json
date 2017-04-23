@@ -6,7 +6,7 @@
     "questions":[
                 {"question_id":1,
                  "question_type":"taste",
-                 "answer_typw":"choice",
+                 "answer_type":"choice",
                  "question":"あなたが好きな色は？",
                  "answers":[
                     {"answer_id":1,
@@ -18,7 +18,7 @@
                 },
                 {"question_id":2,
                  "question_type":"type",
-                 "answer_typw":"choice",
+                 "answer_type":"choice",
                  "question":"あなたのタイプは？",
                  "answers":[
                     {"answer_id":1,
@@ -30,7 +30,7 @@
                 },
                 {"question_id":3,
                  "question_type":"type",
-                 "answer_typw":"choice",
+                 "answer_type":"choice",
                  "question":"あなたのモチベーションは？",
                  "answers":[
                     {"answer_id":1,
