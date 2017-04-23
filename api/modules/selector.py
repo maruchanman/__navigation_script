@@ -20,7 +20,7 @@ class Selector(object):
         Output:
             - json data
         '''
-        json_path = "../dist/" + self.cID + ".json"
+        json_path = "./dist/" + self.cID + ".json"
         json_data = load_json(json_path)
         return json_data
 
