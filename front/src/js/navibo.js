@@ -10,21 +10,12 @@ function load_css(fname) {
   }).appendTo("head")
 }
 
-function load_data(url) {
-  $.ajax({url: url, method: 'POST'})
-    .then(function(data) {
-      console.log(data)
-    })
-}
-
-function load_binds() {
+function init_navibo() {
   $(".navibo-ontoggle").on("click", function() {
     const duration = 100
     if ($(".navibo-open").is(":visible")) {
       $(".navibo-open").toggle(duration, function() {
-        $(".navibo-balloon").toggle(duration, function() {
-          $(".navibo-contents").text("ok")
-        })
+        $(".navibo-balloon").toggle(duration)
       })
     } else {
       $(".navibo-balloon").toggle(duration, function() {
@@ -34,13 +25,55 @@ function load_binds() {
   })
 }
 
-$(function() {
+function _set_msg(content, is_question) {
+  $("<p>", {
+    text: content.question.question
+  }).appendTo(".navibo-contents")
+}
+
+function navibo_choice(question_id, answer_id) {
+  const new_records = JSON.parse(sessionStorage.getItem("navibo-records"))
+  new_records.push([question_id, answer_id])
+  set_navibo(new_records)
+}
+
+function _set_answers(question) {
+  if(question.answer_type == "choice") {
+    question.answers.map(function(answer) {
+      $("<label>", {
+        text: answer.answer_text,
+        class: "navibo-button",
+        onClick: "navibo_choice(" + question.question_id + ", " + answer.answer_id + ")"
+      }).appendTo(".navibo-contents")
+    })
+  }
+}
+
+function set_navibo(records) {
   const cID = $("#navibo").data("id")
-  const jsondaata = load_data("http://localhost:5000/navibo/" + cID)
+  const url = "http://localhost:5000/navibo/" + cID
+  const records_json = JSON.stringify(records)
+  $(".navibo-contents").html("")
+  $.ajax({
+    url: url, method: 'POST', data: records_json, contentType: 'application/json'
+  }).then(function(data) {
+    const jsondata = JSON.parse(data)
+    console.log(jsondata)
+    _set_msg(jsondata.content, jsondata.is_question)
+    if(jsondata.is_question) {
+      _set_answers(jsondata.content.question)
+    }
+  })
+  sessionStorage.setItem("navibo-records", records_json)
+  console.log(sessionStorage.getItem("navibo-records"))
+}
+
+$(function() {
   $("#navibo").load(
     _add_random("./src/html/footer.html"),
     function() {
       load_css(_add_random("./src/css/navibo.css"))
-      load_binds()
+      init_navibo()
+      set_navibo([])
     })
 })

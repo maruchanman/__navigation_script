@@ -6,11 +6,27 @@
   margin: 0;
   padding: 10px;
   display: block;
-  width: 200px;
+  width: 280px;
   text-align: center;
 }
 .navibo-ontoggle {
   cursor: pointer;
+}
+.navibo-open {
+  margin: 0;
+  text-align: right;
+}
+.navibo-button {
+  cursor: pointer;
+  min-width: 80px;
+  margin: 3px;
+  padding: 3px 5px;
+  display: inline-block;
+  border: solid 2px black;
+  border-radius: 5%;
+}
+.navibo-button:hover {
+  background-color: rgba(0, 0, 0, 0.1)
 }
 .navibo-close {
   position: absolute;
