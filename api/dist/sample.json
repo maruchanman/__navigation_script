@@ -46,19 +46,19 @@
              "item_image":"image_1",
              "item_url":"url_kirakira",
              "item_name":"キラキラセット",
-             "item_discription":"とにかくキラキラしています。"
+             "item_description":"とにかくキラキラしています。"
             },
             {"item_id":2,
              "item_image":"image_2",
              "item_url":"url_wakuwaku",
              "item_name":"ワクワクセット",
-             "item_discription":"とにかくワクワクしています。"
+             "item_description":"とにかくワクワクしています。"
             },
             {"item_id":3,
              "item_image":"image_3",
              "item_url":"url_oraora",
              "item_name":"オラオラセット",
-             "item_discription":"とにかくオラオラしています。"
+             "item_description":"とにかくオラオラしています。"
             }
             ]
 }
