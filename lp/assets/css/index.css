@@ -9,6 +9,9 @@ body {
 a {
   color: white;
 }
+.font-xsmall {
+  font-size: 16px;
+}
 .font-small {
   font-size: 16px;
 }
