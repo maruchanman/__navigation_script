@@ -34,7 +34,6 @@ header {
   justify-content: center;
 }
 header h2 {
-  flex: -1;
   font-weight: 900;
   padding-left: 5%;
 }
@@ -45,7 +44,7 @@ footer {
 .block {
   margin: 2px 0px;
   min-height: 420px;
-  padding: 10px 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
 }
@@ -53,7 +52,7 @@ footer {
   flex-direction: 'column';
   justify-content: center;
   align-items: center;
-  padding: 0px 15%;
+  padding: 0px 10%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -67,17 +66,16 @@ footer {
   padding: 0px 30px;
 }
 #about > * {
-  flex: 1;
   text-align: center;
   color: white;
-  min-width: 200px;
+  min-width: 240px;
 }
 #about-figure > div{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 #about-figure p {
   min-width: 100px;
@@ -87,7 +85,7 @@ footer {
   border-radius: 50%;
 }
 #about-figure img {
-  width: 80px;
+  width: 60px;
 }
 #install {
   flex-direction: column;
