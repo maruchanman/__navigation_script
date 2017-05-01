@@ -21,6 +21,9 @@ a {
 .font-xlarge {
   font-size: 28px;
 }
+.font-2xlarge {
+  font-size: 42px;
+}
 header {
   height: 50px;
   diaplay: flex;
@@ -31,7 +34,6 @@ header h2 {
   flex: -1;
   font-weight: 900;
   padding-left: 5%;
-  font-size: 38px;
 }
 footer {
   min-height: 120px;
