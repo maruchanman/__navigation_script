@@ -1,0 +1,166 @@
+body {
+  font-family: MullerWebfont, "Helvetica Neue", helvetica, arial, sans-serif;
+  font-weight: 900;
+  color: #37373F;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+a {
+  color: white;
+}
+.font-small {
+  font-size: 16px;
+}
+.font-medium {
+  font-size: 20px;
+}
+.font-large {
+  font-size: 24px;
+}
+.font-xlarge {
+  font-size: 28px;
+}
+header {
+  height: 50px;
+  diaplay: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header h2 {
+  flex: -1;
+  font-weight: 900;
+  padding-left: 5%;
+  font-size: 38px;
+}
+footer {
+  min-height: 120px;
+  background-color: #37373F;
+}
+.block {
+  margin: 2px 0px;
+  min-height: 420px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+#top {
+  flex-direction: 'column';
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/back.png")
+}
+#about {
+  background-color: #16a085;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px 30px;
+}
+#about > * {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+#about-figure > div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#about-figure p {
+  min-width: 200px;
+  margin: 10px;
+  padding: 40px 20px;
+  border: solid 3px white;
+  border-radius: 50%;
+}
+#about-figure img {
+  width: 80px;
+}
+#install {
+  flex-direction: column;
+  align-items: center;
+}
+#install-logo {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#install-logo label {
+  margin: 20px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#install-logo label * {
+  display: block;
+}
+#install-logo img {
+  width: 120px;
+  padding: 10px;
+}
+#price {
+  background-color: whitesmoke;
+  flex-direction: column;
+  text-align: center;
+}
+#price-free {
+  font-size: 32px;
+}
+#team {
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+#team-icons {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#team-icons label {
+  margin: 0 20px;
+  text-align: center;
+}
+#team-icons label *{
+  display: block;
+}
+#team-icons img {
+  width: 140px;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 0;
+}
+#contact {
+  background-color: #2EB9F4;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.button {
+  border: 2px solid white;
+  border-radius: 5%;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: white;
+  color: #2EB9F4;
+}
