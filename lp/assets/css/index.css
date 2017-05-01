@@ -67,16 +67,17 @@ footer {
   flex: 1;
   text-align: center;
   color: white;
+  min-width: 200px;
 }
 #about-figure > div{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0px 20px;
 }
 #about-figure p {
-  min-width: 200px;
+  min-width: 100px;
   margin: 10px;
   padding: 40px 20px;
   border: solid 3px white;
