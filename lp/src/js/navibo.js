@@ -10,9 +10,9 @@ function load_css(fname) {
   }).appendTo("head")
 }
 
-function init_navibo() {
+function _init_click() {
+  const duration = 100
   $(".navibo-ontoggle").on("click", function() {
-    const duration = 100
     if ($(".navibo-open").is(":visible")) {
       $(".navibo-open").toggle(duration, function() {
         $(".navibo-balloon").toggle(duration)
@@ -23,6 +23,25 @@ function init_navibo() {
       })
     }
   })
+}
+
+function _init_fade() {
+  const duration = 100
+  const timeOut = 3000
+  $(".navibo-ontoggle").on("click", function() {
+    $(".navibo-balloon").toggle(duration)
+  })
+  setTimeout(function() {
+    $(".navibo-balloon").toggle(duration)
+  }, timeOut)
+}
+
+function init_navibo(pattern) {
+  if (pattern == "click") {
+    _init_click()
+  } else if (pattern == "fade") {
+    _init_fade()
+  }
 }
 
 function navibo_choice(question_id, answer_id) {
@@ -84,11 +103,12 @@ function set_navibo(records) {
 }
 
 $(function() {
+  const type = $("#navibo").data("type")
   $("#navibo").load(
-    _add_random("./src/html/footer.html"),
+    _add_random("./src/html/" + type + ".html"),
     function() {
       load_css(_add_random("./src/css/navibo.css"))
-      init_navibo()
+      init_navibo(type)
       set_navibo([])
     })
 })
