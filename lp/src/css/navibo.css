@@ -1,0 +1,58 @@
+#navibo-footer {
+  font-family: Impact;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  display: block;
+  width: 280px;
+  text-align: center;
+}
+.navibo-ontoggle {
+  cursor: pointer;
+}
+.navibo-open {
+  margin: 0;
+  text-align: right;
+}
+.navibo-button {
+  cursor: pointer;
+  min-width: 80px;
+  margin: 3px;
+  padding: 3px 5px;
+  display: inline-block;
+  border: solid 2px black;
+  border-radius: 5%;
+}
+.navibo-button:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+.navibo-close {
+  position: absolute;
+  top: 3%;
+  right: 7%;
+}
+.navibo-balloon {
+  background-color: #fff;
+  padding: 20px 20px;
+  position: relative;
+  border: solid 3px black;
+  border-radius: 10%;
+  min-height: 80px;
+  text-align: center;
+}
+.navibo-balloon:after {
+  border-top: 12px solid black;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  content: '';
+  margin-left: -10px;
+  position: absolute;
+  bottom: -12px;
+  left: 70%;
+}
+.navibo-description {
+  margin: 0;
+  font-size: 0.7em;
+}
