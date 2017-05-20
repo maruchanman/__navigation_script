@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Author: Yuta Yamashita
 
+import pandas as pd
 from .utils import *
 
 
@@ -10,7 +11,7 @@ class Selector(object):
         self.cID = cID
         self.records = records
         self.json_data = self.get_json()
-        self.threshold = self.get_threshold()
+        self.logic = self.get_logic()
         self.questions = self.get_questions()
         self.items = self.get_items()
 
@@ -24,16 +25,15 @@ class Selector(object):
         json_data = load_json(json_path)
         return json_data
 
-    def get_threshold(self):
+    def get_logic(self):
         '''
-        Get threshold by json data.
-        Input:
-            - json data
+        Load logic csv data.
         Output:
-            - threshold
+            - logic data (pandas).
         '''
-        threshold = self.json_data["question_threshold"]
-        return threshold
+        csv_path = "./logic/" + self.cID + ".csv"
+        logic_data = pd.read_csv(csv_path)
+        return logic_data
 
     def get_questions(self):
         '''
@@ -43,7 +43,8 @@ class Selector(object):
         Output:
             - questions
         '''
-        questions = sorted_by_dictkey(self.json_data["questions"], "question_id")
+        questions = sorted_by_dictkey(self.json_data["questions"],
+                                      "question_id")
         return questions
 
     def get_items(self):
@@ -60,15 +61,13 @@ class Selector(object):
     def select_question(self):
         '''
         Select return quesion.
-        Now, selected by random.
         Input:
             - questions
             - available nums
         Output:
             - use question
         '''
-        import random
-        use_num = random.choice(self.available_nums)
+        use_num = self.message_info[1]
         question = self.questions[use_num-1]
         return question
 
@@ -82,9 +81,7 @@ class Selector(object):
         Output:
             - use item
         '''
-        import random
-        item_nums = [x for x in range(1, len(self.items)+1)]
-        use_num = random.choice(item_nums)
+        use_num = self.message_info[1]
         item = self.items[use_num-1]
         return item
 
@@ -123,40 +120,44 @@ class Selector(object):
     def make_message_json(self):
         '''
         Make json data for return message.
-        If available_nums == -1, return item message.
+        If message type == Q, return question message.
         Input:
             - records
             - use question
         Output:
             - message json data
         '''
-        if self.available_nums == -1:
-            return self.make_item_message()
-        else:
-            return self.make_question_message()
 
-    def get_available_questions(self):
+        assert self.message_info[0] == "Q" or self.message_info[0] == "I",\
+            "Error! Please set logic type = Q or I"
+
+        if self.message_info[0] == "Q":
+            return self.make_question_message()
+        else:
+            return self.make_item_message()
+
+    def check_logic(self):
         '''
-        Get available question numbers.
-        If number of answers > threshold, return -1.
+        Check logic and select next message.
         Input:
             - records
-            - questions
+            - logic
         Output:
-            - available question numbers
+            - next answer type and ID
         '''
-        used_nums = [x[0] for x in self.records]
-        question_nums = [x for x in range(1, len(self.questions)+1)]
-        available_nums = list(filter(lambda x: x not in used_nums, question_nums))
-        if len(used_nums) >= self.threshold or len(available_nums) == 0:
-            return -1
+        if len(self.records) == 0:
+            return ["Q", 1]
         else:
-            return available_nums
+            last_q = self.records[-1][0]
+            last_a = self.records[-1][1]
+            set_df = self.logic[(self.logic.question == last_q) & (self.logic.answer == last_a)]
+            message_info = set_df[["next_type", "next_id"]].values[0]
+            return message_info
 
     def get_message(self):
         '''
         Main module of getting return message.
         '''
-        self.available_nums = self.get_available_questions()
+        self.message_info = self.check_logic()
         message_json = self.make_message_json()
         return message_json

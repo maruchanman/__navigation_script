@@ -2,63 +2,89 @@
     "company_name":"sample company",
     "create_date":"2017-04-01",
     "update_date":"2017-04-22",
-    "question_threshold":2,
     "questions":[
                 {"question_id":1,
-                 "question_type":"taste",
+                 "question_type":"welcome",
                  "answer_type":"choice",
-                 "question":"あなたが好きな色は？",
+                 "question":"こんにちは！naviboです。<feed>ご用件をお聞かせください。",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"暖色"
+                     "answer_text":"naviboって？"
                     },
                     {"answer_id":2,
-                     "answer_text":"寒色"
-                    }]
+                     "answer_text":"どんなグループ？"
+                    },
+                    {"answer_id":3,
+                     "answer_text":"お問い合わせ"
+                    }
+                    ]
                 },
                 {"question_id":2,
-                 "question_type":"type",
+                 "question_type":"interest",
                  "answer_type":"choice",
-                 "question":"あなたのタイプは？",
+                 "question":"naviboのどんなところが知りたいですか？",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"ストイック"
+                     "answer_text":"機能"
                     },
                     {"answer_id":2,
-                     "answer_text":"のんびり"
-                    }]
+                     "answer_text":"導入手順"
+                    },
+                    {"answer_id":3,
+                     "answer_text":"導入実績"
+                    }
+                    ]
                 },
                 {"question_id":3,
-                 "question_type":"type",
+                 "question_type":"information",
                  "answer_type":"choice",
-                 "question":"あなたのモチベーションは？",
+                 "question":"お問い合わせ内容を教えてください。",
                  "answers":[
                     {"answer_id":1,
-                     "answer_text":"彼女"
+                     "answer_text":"導入を検討したい"
                     },
                     {"answer_id":2,
-                     "answer_text":"お金"
-                    }]
+                     "answer_text":"その他"
+                    }
+                    ]
                 }
                 ],
     "items":[
             {"item_id":1,
              "item_image":"image_1",
-             "item_url":"url_kirakira",
-             "item_name":"キラキラセット",
-             "item_description":"とにかくキラキラしています。"
+             "item_url":"url_for_what's_navibo",
+             "item_name":"",
+             "item_description":"naviboはお客様との会話を実現する\n自動応答システムです。<feed>詳しくは以下のページをご覧ください。"
             },
             {"item_id":2,
              "item_image":"image_2",
-             "item_url":"url_wakuwaku",
-             "item_name":"ワクワクセット",
-             "item_description":"とにかくワクワクしています。"
+             "item_url":"url_for_how_install_navibo",
+             "item_name":"",
+             "item_description":"naviboの導入はとても簡単！\nプログラムを一行追加するだけ！<feed>詳しくは以下のページをご覧ください。"
             },
             {"item_id":3,
              "item_image":"image_3",
-             "item_url":"url_oraora",
-             "item_name":"オラオラセット",
-             "item_description":"とにかくオラオラしています。"
+             "item_url":"",
+             "item_name":"",
+             "item_description":"naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。"
+            },
+            {"item_id":4,
+             "item_image":"image_4",
+             "item_url":"url_for_team",
+             "item_name":"",
+             "item_description":"naviboは東京大学の学生を中心に構成されているグループです。<feed>詳しくは以下のページをご覧ください。"
+            },
+            {"item_id":5,
+             "item_image":"image_5",
+             "item_url":"url_for_install_navibo",
+             "item_name":"",
+             "item_description":"ご興味を持っていただき、ありがとうございます。<feed>以下のページからお手続きをよろしくお願いします。"
+            },
+            {"item_id":6,
+             "item_image":"image_6",
+             "item_url":"url_for_others",
+             "item_name":"",
+             "item_description":"以下のフォーマットにお問い合わせ内容を記載頂けますでしょうか。"
             }
             ]
 }
