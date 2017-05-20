@@ -17,6 +17,7 @@ function _init_click() {
       $(".navibo-open").toggle(duration, function() {
         $(".navibo-balloon").toggle(duration)
       })
+      set_navibo([])
     } else {
       $(".navibo-balloon").toggle(duration, function() {
         $(".navibo-open").toggle(duration)
@@ -52,7 +53,7 @@ function navibo_choice(question_id, answer_id) {
 
 function _set_question(question) {
   $("<p>", {
-    text: question.question
+    text: question.question_text
   }).appendTo(".navibo-contents")
 }
 
@@ -68,14 +69,19 @@ function _set_answers(question) {
   }
 }
 
-function _set_item(item) {
-  $("<p>", {
-    text: item.item_name
-  }).appendTo(".navibo-contents")
+function _set_response(response) {
   $("<p>", {
     class: "navibo-description",
-    text: item.item_description
+    text: response.content.text
   }).appendTo(".navibo-contents")
+  $("<label>", {
+    text: response.content.button,
+    class: "navibo-button",
+    onClick: "location.href = '" + response.content.url + "'"
+  }).appendTo(".navibo-contents")
+  if(response.response_type == "scroll") {
+    $("html, body").animate({scrollTop: $(response.content.scrollto).offset().top})
+  }
 }
 
 function set_content(content, is_question) {
@@ -83,7 +89,7 @@ function set_content(content, is_question) {
     _set_question(content.question)
     _set_answers(content.question)
   } else {
-    _set_item(content.item)
+    _set_response(content.response)
   }
 }
 

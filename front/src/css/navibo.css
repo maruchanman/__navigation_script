@@ -10,7 +10,7 @@
 .navibo-open {
   color: white;
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .navibo-ontoggle {
   cursor: pointer;
@@ -34,7 +34,7 @@
 }
 .navibo-balloon {
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px 20px;
   position: relative;
   min-height: 80px;
@@ -53,5 +53,4 @@
 }
 .navibo-description {
   margin: 0;
-  font-size: 0.7em;
 }
