@@ -13,7 +13,7 @@ class Selector(object):
         self.json_data = self.get_json()
         self.logic = self.get_logic()
         self.questions = self.get_questions()
-        self.items = self.get_items()
+        self.responses = self.get_responses()
 
     def get_json(self):
         '''
@@ -47,16 +47,16 @@ class Selector(object):
                                       "question_id")
         return questions
 
-    def get_items(self):
+    def get_responses(self):
         '''
-        Get items by json data.
+        Get responses by json data.
         Input:
             - json data
         Output:
-            - items
+            - responses
         '''
-        items = sorted_by_dictkey(self.json_data["items"], "item_id")
-        return items
+        responses = sorted_by_dictkey(self.json_data["response"], "response_id")
+        return responses
 
     def select_question(self):
         '''
@@ -71,30 +71,30 @@ class Selector(object):
         question = self.questions[use_num-1]
         return question
 
-    def select_item(self):
+    def select_response(self):
         '''
-        Select item by algorithm.
+        Select response by algorithm.
         Now, selected by random.
         Input:
-            - items
+            - responses
             - records
         Output:
-            - use item
+            - use response
         '''
         use_num = self.message_info[1]
-        item = self.items[use_num-1]
-        return item
+        response = self.responses[use_num-1]
+        return response
 
-    def make_item_message(self):
+    def make_response_message(self):
         '''
-        Make json message of item.
+        Make json message of response.
         '''
-        self.item = self.select_item()
+        self.response = self.select_response()
         message = {
             "is_question": False,
             "content": {
                 "question": {},
-                "item": self.item
+                "response": self.response
             },
             "records": self.records
         }
@@ -110,7 +110,7 @@ class Selector(object):
             "is_question": True,
             "content": {
                 "question": self.question,
-                "item": {}
+                "response": {}
             },
             "records": self.records
         }
@@ -134,7 +134,7 @@ class Selector(object):
         if self.message_info[0] == "Q":
             return self.make_question_message()
         else:
-            return self.make_item_message()
+            return self.make_response_message()
 
     def check_logic(self):
         '''
