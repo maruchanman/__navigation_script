@@ -6,7 +6,7 @@
                 {"question_id":1,
                  "question_type":"welcome",
                  "answer_type":"choice",
-                 "question":"こんにちは！naviboです。<feed>ご用件をお聞かせください。",
+                 "question":"こんにちは！naviboです。\nご用件をお聞かせください。",
                  "answers":[
                     {"answer_id":1,
                      "answer_text":"naviboって？"
@@ -52,37 +52,37 @@
     "items":[
             {"item_id":1,
              "item_image":"image_1",
-             "item_url":"url_for_what's_navibo",
+             "item_url":"http://navi-bo.com#about",
              "item_name":"",
-             "item_description":"naviboはお客様との会話を実現する\n自動応答システムです。<feed>詳しくは以下のページをご覧ください。"
+             "item_description":"naviboはお客様との会話を実現する\n自動応答システムです。"
             },
             {"item_id":2,
              "item_image":"image_2",
-             "item_url":"url_for_how_install_navibo",
+             "item_url":"http://navi-bo.com#install",
              "item_name":"",
-             "item_description":"naviboの導入はとても簡単！\nプログラムを一行追加するだけ！<feed>詳しくは以下のページをご覧ください。"
+             "item_description":"naviboの導入はとても簡単！\nプログラムを一行追加するだけ！"
             },
             {"item_id":3,
              "item_image":"image_3",
-             "item_url":"",
+             "item_url":"http://navi-bo.com#price",
              "item_name":"",
              "item_description":"naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。"
             },
             {"item_id":4,
              "item_image":"image_4",
-             "item_url":"url_for_team",
+             "item_url":"http://navi-bo.com#team",
              "item_name":"",
-             "item_description":"naviboは東京大学の学生を中心に構成されているグループです。<feed>詳しくは以下のページをご覧ください。"
+             "item_description":"naviboは東京大学の学生を中心に構成されているグループです。"
             },
             {"item_id":5,
              "item_image":"image_5",
-             "item_url":"url_for_install_navibo",
+             "item_url":"http://navi-bo.com#contact",
              "item_name":"",
-             "item_description":"ご興味を持っていただき、ありがとうございます。<feed>以下のページからお手続きをよろしくお願いします。"
+             "item_description":"ご興味を持っていただき、ありがとうございます。\n以下のページからお手続きをよろしくお願いします。"
             },
             {"item_id":6,
              "item_image":"image_6",
-             "item_url":"url_for_others",
+             "item_url":"http://navi-bo.com#contact",
              "item_name":"",
              "item_description":"以下のフォーマットにお問い合わせ内容を記載頂けますでしょうか。"
             }
