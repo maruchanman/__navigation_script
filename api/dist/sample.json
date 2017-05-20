@@ -66,14 +66,10 @@
       "response_type": "scroll",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "http://navi-bo.com#about",
-          "text": "naviboはお客様との会話を実現する\n自動応答システムです。"
-        },
-        "after": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "お問い合わせはこちらからどうぞ！"
-        }
+        "scrollto": "#about",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "button": "お問い合わせ",
+        "text": "naviboはお客様との会話を実現する\n自動応答システムです。"
       }
     },
     {
@@ -81,14 +77,10 @@
       "response_type": "scroll",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "http://navi-bo.com#install",
-          "text": "naviboの導入はとても簡単！\nプログラムを一行追加するだけ！"
-        },
-        "after": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "お問い合わせはこちらからどうぞ！"
-        }
+        "scrollto": "#install",
+        "text": "naviboの導入はとても簡単！\nプログラムを数行追加するだけ！",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "button": "お問い合わせ"
       }
     },
     {
@@ -96,14 +88,10 @@
       "response_type": "scroll",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "http://navi-bo.com#price",
-          "text": "naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。"
-        },
-        "after": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "お問い合わせはこちらからどうぞ！"
-        }
+        "scrollto": "#price",
+        "text": "naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "button": "お問い合わせ"
       }
     },
     {
@@ -111,14 +99,10 @@
       "response_type": "scroll",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "http://navi-bo.com#team",
-          "text": "naviboは東京大学の学生を中心に構成されているグループです。"
-        },
-        "after": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "お問い合わせはこちらからどうぞ！"
-        }
+        "scrollto": "#team",
+        "text": "naviboは東京大学の学生を中心に構成されているグループです。",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "button": "お問い合わせ"
       }
     },
     {
@@ -126,11 +110,9 @@
       "response_type": "jump",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "ご興味を持っていただき、ありがとうございます。\nお問い合わせはこちらからどうぞ！"
-        },
-        "after": {}
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "text": "ご興味を持っていただき、ありがとうございます。",
+        "button": "お問い合わせ"
       }
     },
     {
@@ -138,11 +120,9 @@
       "response_type": "jump",
       "content": {
         "content_type": "",
-        "before": {
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
-          "text": "ご興味を持っていただき、ありがとうございます。\nお問い合わせはこちらからどうぞ！"
-        },
-        "after": {}
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+        "text": "ご興味を持っていただき、ありがとうございます。",
+        "button": "お問い合わせ"
       }
     }
   ]
