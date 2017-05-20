@@ -1,90 +1,149 @@
 {
-    "company_name":"sample company",
-    "create_date":"2017-04-01",
-    "update_date":"2017-04-22",
-    "questions":[
-                {"question_id":1,
-                 "question_type":"welcome",
-                 "answer_type":"choice",
-                 "question":"こんにちは！naviboです。\nご用件をお聞かせください。",
-                 "answers":[
-                    {"answer_id":1,
-                     "answer_text":"naviboって？"
-                    },
-                    {"answer_id":2,
-                     "answer_text":"どんなグループ？"
-                    },
-                    {"answer_id":3,
-                     "answer_text":"お問い合わせ"
-                    }
-                    ]
-                },
-                {"question_id":2,
-                 "question_type":"interest",
-                 "answer_type":"choice",
-                 "question":"naviboのどんなところが知りたいですか？",
-                 "answers":[
-                    {"answer_id":1,
-                     "answer_text":"機能"
-                    },
-                    {"answer_id":2,
-                     "answer_text":"導入手順"
-                    },
-                    {"answer_id":3,
-                     "answer_text":"導入実績"
-                    }
-                    ]
-                },
-                {"question_id":3,
-                 "question_type":"information",
-                 "answer_type":"choice",
-                 "question":"お問い合わせ内容を教えてください。",
-                 "answers":[
-                    {"answer_id":1,
-                     "answer_text":"導入を検討したい"
-                    },
-                    {"answer_id":2,
-                     "answer_text":"その他"
-                    }
-                    ]
-                }
-                ],
-    "items":[
-            {"item_id":1,
-             "item_image":"image_1",
-             "item_url":"http://navi-bo.com#about",
-             "item_name":"",
-             "item_description":"naviboはお客様との会話を実現する\n自動応答システムです。"
-            },
-            {"item_id":2,
-             "item_image":"image_2",
-             "item_url":"http://navi-bo.com#install",
-             "item_name":"",
-             "item_description":"naviboの導入はとても簡単！\nプログラムを一行追加するだけ！"
-            },
-            {"item_id":3,
-             "item_image":"image_3",
-             "item_url":"http://navi-bo.com#price",
-             "item_name":"",
-             "item_description":"naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。"
-            },
-            {"item_id":4,
-             "item_image":"image_4",
-             "item_url":"http://navi-bo.com#team",
-             "item_name":"",
-             "item_description":"naviboは東京大学の学生を中心に構成されているグループです。"
-            },
-            {"item_id":5,
-             "item_image":"image_5",
-             "item_url":"http://navi-bo.com#contact",
-             "item_name":"",
-             "item_description":"ご興味を持っていただき、ありがとうございます。\n以下のページからお手続きをよろしくお願いします。"
-            },
-            {"item_id":6,
-             "item_image":"image_6",
-             "item_url":"http://navi-bo.com#contact",
-             "item_name":"",
-             "item_description":"以下のフォーマットにお問い合わせ内容を記載頂けますでしょうか。"
-            }
-            ]
+  "company_name": "samplecompany",
+  "create_date": "2017-04-01",
+  "update_date": "2017-04-22",
+  "questions": [
+    {
+      "question_id": 1,
+      "question_type": "welcome",
+      "answer_type": "choice",
+      "question_text": "こんにちは！naviboです。\nご用件をお聞かせください。",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "naviboって？"
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "どんなグループ？"
+        },
+        {
+          "answer_id": 3,
+          "answer_text": "お問い合わせ"
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_type": "interest",
+      "answer_type": "choice",
+      "question_text": "naviboのどんなところが知りたいですか？",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "機能"
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "導入手順"
+        },
+        {
+          "answer_id": 3,
+          "answer_text": "導入実績"
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_type": "information",
+      "answer_type": "choice",
+      "question_text": "お問い合わせ内容を教えてください。",
+      "answers": [
+        {
+          "answer_id": 1,
+          "answer_text": "導入を検討したい"
+        },
+        {
+          "answer_id": 2,
+          "answer_text": "その他"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "response_id": 1,
+      "response_type": "scroll",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "http://navi-bo.com#about",
+          "text": "naviboはお客様との会話を実現する\n自動応答システムです。"
+        },
+        "after": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "お問い合わせはこちらからどうぞ！"
+        }
+      }
+    },
+    {
+      "response_id": 2,
+      "response_type": "scroll",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "http://navi-bo.com#install",
+          "text": "naviboの導入はとても簡単！\nプログラムを一行追加するだけ！"
+        },
+        "after": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "お問い合わせはこちらからどうぞ！"
+        }
+      }
+    },
+    {
+      "response_id": 3,
+      "response_type": "scroll",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "http://navi-bo.com#price",
+          "text": "naviboは現在、トライアル期間中です。\n多くのお客様に興味を持っていただいています。"
+        },
+        "after": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "お問い合わせはこちらからどうぞ！"
+        }
+      }
+    },
+    {
+      "response_id": 4,
+      "response_type": "scroll",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "http://navi-bo.com#team",
+          "text": "naviboは東京大学の学生を中心に構成されているグループです。"
+        },
+        "after": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "お問い合わせはこちらからどうぞ！"
+        }
+      }
+    },
+    {
+      "response_id": 5,
+      "response_type": "jump",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "ご興味を持っていただき、ありがとうございます。\nお問い合わせはこちらからどうぞ！"
+        },
+        "after": {}
+      }
+    },
+    {
+      "response_id": 6,
+      "response_type": "jump",
+      "content": {
+        "content_type": "",
+        "before": {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7g_NeuQhyLewBFuyJWfrEuPn51v1MoEW49VzVkixPVcNsPA/viewform",
+          "text": "ご興味を持っていただき、ありがとうございます。\nお問い合わせはこちらからどうぞ！"
+        },
+        "after": {}
+      }
+    }
+  ]
 }
